@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anurag Borkakati</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #202124;
+  color: #e8eaed;
+  overflow-x: hidden;
+  opacity: 0;
+  animation: fadeInBody 2s ease forwards;
+}
+
+@keyframes fadeInBody {
+  0% { opacity: 0; }
+  20% { opacity: 0.2; }
+  40% { opacity: 0.4; }
+  60% { opacity: 0.6; }
+  80% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+header {
+  padding: 4rem 2rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid #3c4043;
+}
+h1 {
+  font-size: 2.8rem;
+  color: #e8eaed;
+}
+.typing {
+  font-size: 1.1rem;
+  color: #9aa0a6;
+}
+
+nav {
+  text-align: center;
+  padding: 1rem;
+  background: #303134;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #3c4043;
+}
+nav a {
+  color: #8ab4f8;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav a:hover {
+  color: #e8eaed;
+}
+section {
+  padding: 2.5rem 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #292a2d;
+  border: 1px solid #3c4043;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+section h2 {
+  border-bottom: 1px solid #3c4043;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+footer {
+  background: #303134;
+  color: #9aa0a6;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  margin-top: 4rem;
+}
+.feedback-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #8ab4f8;
+  color: #202124;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+.feedback-btn:hover {
+  background: #669df6;
+}
+#clock-section {
+  text-align: center;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Anurag Borkakati</h1>
+    <p class="typing">Learning. Creating. Dominating.</p>
+  </header>  <nav>
+    <a href="https://anurvg.github.io/aboutc.github.io/" target="_blank">About</a>
+  </nav>  <section id="bio">
+    <h2>Who Am I?</h2>
+    <p id="bio-text">I'm not a professional writer, but I love to write. I'm not a professional coder either... but this site? This one’s all mine.</p>
+  </section>  <section id="clock-section">
+    <h2>Live From Assam 🕰️</h2>
+    <canvas id="analog-clock" width="200" height="200" style="border-radius:50%; box-shadow: 0 0 20px rgba(0,255,120,0.4);"></canvas>
+    <p id="digital-time">Loading...</p>
+    <p id="date-show">Loading date...</p>
+  </section>  <section id="messi">
+    <h2>Messi Tribute</h2>
+    <img src="assets/messi.jpg" alt="Leo Messi" style="width:100%; max-width:400px; border-radius:15px; display:block; margin:auto; box-shadow:0 4px 20px rgba(255,255,255,0.1);" />
+    <h3 style="text-align:center; margin-top:10px; color:#8ab4f8;">GREATEST OF THE TIME 🐐</h3>
+  </section>  <section id="minddump">
+    <h2>Mind Dump 🧠</h2>
+    <blockquote id="quote-box" style="font-style: italic; color: #9aa0a6; text-align:center;">Loading wisdom...</blockquote>
+  </section>  <section id="contact">
+    <h2>Contact</h2>
+    <p>Instagram: <a href="https://instagram.com/anurvg.r" target="_blank">@anurvg.r</a> (DMs Open)</p>
+  </section>  <footer>
+    © 2025 Anurag Borkakati | 🥚 You found the hidden Easter Egg! ;)
+  </footer><button class="feedback-btn" onclick="window.location.href='https://anurvg.github.io/feedback.github.io/'">Feedback</button>
+
+  <script>
+    const bioTexts = [
+      "I'm not a professional writer, but I love to write.",
+      "Not a certified coder... but this pixel, this layout, this vibe — it's all mine.",
+      "Sometimes I code, sometimes I rhyme. But I'm always online.",
+      "Built from Assam, fueled by dreams, wrapped in HTML and passion."
+    ];
+    let bioIndex = 0;
+    setInterval(() => {
+      document.getElementById("bio-text").innerText = bioTexts[bioIndex];
+      bioIndex = (bioIndex + 1) % bioTexts.length;
+    }, 5000);
+
+    const quotes = [
+      "Sometimes silence screams louder than words.",
+      "Pixels and poems are how I breathe.",
+      "You’re just a thought in someone else’s simulation.",
+      "No degree in hacking — but I find my way into everything.",
+      "Messi plays football, I code feelings.",
+      "Create. Break. Repeat.",
+      "In a world full of noise, be the frequency.",
+      "Dreams don't need logic.",
+      "Not a prodigy, but definitely persistent.",
+      "Lost in code, found in creation.",
+      "Functioning on caffeine and chaos.",
+      "This site runs on vibes.",
+      "Night owls write better code.",
+      "Tame your tabs, not your thoughts.",
+      "404: Motivation not found. Still creating.",
+      "Every pixel matters.",
+      "You're witnessing passion in pixels.",
+      "Behind every line, there's a story.",
+      "Deadlines are just suggestions.",
+      "Autodidact powered website.",
+      "Not perfect, but perfectly mine.",
+      "Simplicity isn't easy, it's smart.",
+      "Debugging life, one error at a time.",
+      "The grind doesn't need filters.",
+      "Some scripts are never meant to end.",
+      "Reality.exe is broken, switching to imagination."
+    ];
+    let quoteBox = document.getElementById("quote-box");
+    let quoteIndex = 0;
+    setInterval(() => {
+      quoteBox.innerText = quotes[quoteIndex];
+      quoteIndex = (quoteIndex + 1) % quotes.length;
+    }, 2000);
+
+    const canvas = document.getElementById("analog-clock");
+    const ctx = canvas.getContext("2d");
+    const radius = canvas.height / 2;
+    ctx.translate(radius, radius);
+
+    function drawClock() {
+      drawGradientFace(ctx, radius);
+      drawTicks(ctx, radius);
+      drawNumbers(ctx, radius);
+      drawTime(ctx, radius);
+    }
+
+    function drawGradientFace(ctx, radius) {
+      let grad = ctx.createRadialGradient(0, 0, radius * 0.1, 0, 0, radius);
+      grad.addColorStop(0, '#202124');
+      grad.addColorStop(1, '#0f3d2e');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(0, 0, radius, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.strokeStyle = '#8ab4f8';
+      ctx.lineWidth = 4;
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.arc(0, 0, 5, 0, 2 * Math.PI);
+      ctx.fillStyle = '#00ff88';
+      ctx.fill();
+    }
+
+    function drawTicks(ctx, radius) {
+      for (let i = 0; i < 60; i++) {
+        let angle = i * Math.PI / 30;
+        let tickLength = i % 5 === 0 ? 10 : 5;
+        ctx.beginPath();
+        ctx.lineWidth = i % 5 === 0 ? 2 : 1;
+        ctx.strokeStyle = '#ccc';
+        ctx.moveTo(radius * Math.cos(angle), radius * Math.sin(angle));
+        ctx.lineTo((radius - tickLength) * Math.cos(angle), (radius - tickLength) * Math.sin(angle));
+        ctx.stroke();
+      }
+    }
+
+    function drawNumbers(ctx, radius) {
+      ctx.font = radius * 0.15 + "px sans-serif";
+      ctx.textBaseline = "middle";
+      ctx.textAlign = "center";
+      for(let num = 1; num <= 12; num++){
+        let angle = num * Math.PI / 6;
+        ctx.rotate(angle);
+        ctx.translate(0, -radius * 0.8);
+        ctx.rotate(-angle);
+        ctx.fillText(num.toString(), 0, 0);
+        ctx.rotate(angle);
+        ctx.translate(0, radius * 0.8);
+        ctx.rotate(-angle);
+      }
+    }
+
+    function drawTime(ctx, radius){
+      const now = new Date();
+      let hour = now.getHours();
+      let minute = now.getMinutes();
+      let second = now.getSeconds();
+      hour = hour % 12;
+      hour = (hour * Math.PI / 6) + (minute * Math.PI / (6 * 60)) + (second * Math.PI / (360 * 60));
+      drawHand(ctx, hour, radius * 0.5, 6);
+      minute = (minute * Math.PI / 30) + (second * Math.PI / (30 * 60));
+      drawHand(ctx, minute, radius * 0.8, 4);
+      second = (second * Math.PI / 30);
+      drawHand(ctx, second, radius * 0.9, 2, '#8ab4f8');
+    }
+
+    function drawHand(ctx, pos, length, width, color = '#e8eaed') {
+      ctx.beginPath();
+      ctx.lineWidth = width;
+      ctx.lineCap = "round";
+      ctx.strokeStyle = color;
+      ctx.moveTo(0,0);
+      ctx.rotate(pos);
+      ctx.lineTo(0, -length);
+      ctx.stroke();
+      ctx.rotate(-pos);
+    }
+
+    function updateDigitalClock() {
+      const now = new Date();
+      const options = { weekday: 'short', month: 'long', day: 'numeric' };
+      const time = now.toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata' });
+      const date = now.toLocaleDateString('en-IN', options);
+      document.getElementById("digital-time").textContent = `Time: ${time}`;
+      document.getElementById("date-show").textContent = `${date}`;
+    }
+    setInterval(updateDigitalClock, 1000);
+    updateDigitalClock();
+    setInterval(drawClock, 1000);
+  </script></body>
+</html>
